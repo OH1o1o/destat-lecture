@@ -31,3 +31,7 @@
 /snapshots
 
 /.vscode
+
+# Local node deployment state and logs
+/ignition/deployments/chain-31337/
+*.log

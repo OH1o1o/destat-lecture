@@ -18,6 +18,7 @@ contract Survey {
     uint256 public rewardAmount;
     Question[] questions;
     Answer[] answers;
+    mapping(address => uint) testMap;
 
     //primitive: int, bool, uint
     //memory, storage, calldata
@@ -31,6 +32,7 @@ contract Survey {
         description = _description;
         targetNumber = _targetNumber;
         rewardAmount = msg.value / _targetNumber;
+        testMap[0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199] = 1000;
         for (uint i = 0; i < _questions.length; i++) {
             questions.push(
                 Question({
