@@ -1,87 +1,18 @@
-# Welcome to React Router!
+# DESTAT UI
 
-A modern, production-ready template for building full-stack React applications using React Router.
+React Router 기반 설문조사 화면과 MetaMask 지갑 연결 코드입니다.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 실행
 
-## Features
+Node.js 22.23 이상에서 실행합니다.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
+```powershell
+npm ci
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+MetaMask 확장 프로그램이 설치된 Chrome 또는 Edge에서 http://localhost:5173 을 엽니다. 상단 Connect 버튼에서 MetaMask를 선택합니다.
 
-## Building for Production
+로컬 Hardhat 네트워크는 RPC `http://127.0.0.1:8545`, Chain ID `31337`을 사용합니다.
 
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Supabase를 사용하려면 `.env.example`을 `.env.local`로 복사하고 본인 프로젝트의 공개 설정을 입력합니다.
